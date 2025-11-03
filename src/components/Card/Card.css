@@ -1,0 +1,153 @@
+.card {
+    position: absolute;
+    background: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    cursor: move;
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    min-width: 150px;
+    min-height: 150px;
+    z-index: 10;
+}
+
+.card.dragging {
+    cursor: grabbing;
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.7);
+    opacity: 0.9;
+}
+
+.card.resizing {
+    cursor: nwse-resize;
+}
+
+.card-header {
+    background: #252525;
+    padding: 12px 16px;
+    border-bottom: 1px solid #2a2a2a;
+    cursor: grab;
+    flex-shrink: 0;
+}
+
+.card-header:active {
+    cursor: grabbing;
+}
+
+.card-header h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.card-content {
+    padding: 0;
+    flex: 1;
+    overflow: hidden;
+    color: #e0e0e0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Resize handles */
+.resize-handle {
+    position: absolute;
+    background: transparent;
+    z-index: 20;
+}
+
+.resize-handle-top,
+.resize-handle-bottom {
+    left: 8px;
+    right: 8px;
+    height: 8px;
+    cursor: ns-resize;
+}
+
+.resize-handle-top {
+    top: 0;
+}
+
+.resize-handle-bottom {
+    bottom: 0;
+}
+
+.resize-handle-left,
+.resize-handle-right {
+    top: 8px;
+    bottom: 8px;
+    width: 8px;
+    cursor: ew-resize;
+}
+
+.resize-handle-left {
+    left: 0;
+}
+
+.resize-handle-right {
+    right: 0;
+}
+
+.resize-handle-top-left,
+.resize-handle-top-right,
+.resize-handle-bottom-left,
+.resize-handle-bottom-right {
+    width: 16px;
+    height: 16px;
+    cursor: nwse-resize;
+}
+
+.resize-handle-top-left {
+    top: 0;
+    left: 0;
+    cursor: nwse-resize;
+}
+
+.resize-handle-top-right {
+    top: 0;
+    right: 0;
+    cursor: nesw-resize;
+}
+
+.resize-handle-bottom-left {
+    bottom: 0;
+    left: 0;
+    cursor: nesw-resize;
+}
+
+.resize-handle-bottom-right {
+    bottom: 0;
+    right: 0;
+    cursor: nwse-resize;
+}
+
+/* Visual indicators for resize handles on hover */
+.resize-handle:hover {
+    background: rgba(74, 158, 255, 0.2);
+}
+
+.resize-handle-top-left:hover,
+.resize-handle-top-right:hover,
+.resize-handle-bottom-left:hover,
+.resize-handle-bottom-right:hover {
+    background: rgba(74, 158, 255, 0.3);
+    border-radius: 50%;
+}
+
+@media (max-width: 640px) {
+    .card {
+        min-width: 120px;
+        min-height: 120px;
+    }
+    
+    .card-header {
+        padding: 10px 12px;
+    }
+    
+    .card-content {
+        padding: 12px;
+    }
+}

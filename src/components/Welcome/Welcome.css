@@ -1,0 +1,245 @@
+.welcome-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 100px);
+    padding: 40px 20px;
+    padding-bottom: 120px;
+}
+
+.welcome-content {
+    max-width: 900px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.welcome-header {
+    text-align: center;
+}
+
+.welcome-title {
+    font-size: 48px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 12px 0;
+    background: linear-gradient(135deg, #4a9eff 0%, #8a2be2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.welcome-subtitle {
+    font-size: 20px;
+    color: #b0b0b0;
+    margin: 0;
+}
+
+.developer-info {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.developer-card {
+    background: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 16px;
+    padding: 32px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.developer-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px rgba(74, 158, 255, 0.2);
+    border-color: #3a3a3a;
+}
+
+.developer-avatar {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 20px;
+    background: linear-gradient(135deg, #4a9eff 0%, #8a2be2 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    box-shadow: 0 4px 20px rgba(74, 158, 255, 0.4);
+}
+
+.developer-name {
+    font-size: 28px;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0 0 8px 0;
+}
+
+.developer-role {
+    font-size: 16px;
+    color: #4a9eff;
+    margin: 0 0 24px 0;
+    font-weight: 500;
+}
+
+.developer-details {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #b0b0b0;
+    font-size: 14px;
+}
+
+.detail-item svg {
+    color: #4a9eff;
+    flex-shrink: 0;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.feature-card {
+    background: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 12px;
+    padding: 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+    border-color: #4a9eff;
+    box-shadow: 0 4px 20px rgba(74, 158, 255, 0.15);
+}
+
+.feature-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto;
+    background: rgba(74, 158, 255, 0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4a9eff;
+}
+
+.feature-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0;
+}
+
+.feature-card p {
+    font-size: 14px;
+    color: #888;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.welcome-footer {
+    text-align: center;
+    padding-top: 32px;
+    border-top: 1px solid #2a2a2a;
+}
+
+.footer-text {
+    font-size: 14px;
+    color: #888;
+    margin: 0 0 8px 0;
+}
+
+.heart {
+    color: #dc3545;
+    display: inline-block;
+    animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+.href {
+    color: #4a9eff;
+    font-weight: bold;
+}
+
+.opcity-selected {
+    opacity: 10%;
+}
+
+.message {
+    text-align: center;
+}
+.message p {
+    font-size: small;
+    color: #b0b0b0;
+    font-weight: bold;
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    10%, 30% {
+        transform: scale(1.1);
+    }
+    20%, 40% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.15);
+    }
+}
+
+.footer-year {
+    font-size: 12px;
+    color: #666;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .welcome-container {
+        padding: 20px 16px;
+        padding-bottom: 120px;
+    }
+
+    .welcome-title {
+        font-size: 36px;
+    }
+
+    .welcome-subtitle {
+        font-size: 16px;
+    }
+
+    .developer-card {
+        padding: 24px;
+    }
+
+    .developer-name {
+        font-size: 24px;
+    }
+
+    .developer-details {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
